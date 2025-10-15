@@ -135,13 +135,19 @@ def main():
     clear_terminal()
     print_banner()
 
-    url = input(f"{Fore.MAGENTA}📎 Nhập URL video: {Style.RESET_ALL}").strip()
-    if not url:
-        print(f"{Fore.RED}⚠️ URL không hợp lệ!{Style.RESET_ALL}")
-        return
+    while True:
+        url = input(f"{Fore.MAGENTA}📎 Nhập URL video (hoặc gõ 'exit' để thoát): {Style.RESET_ALL}").strip()
+        if url.lower() in ['exit', 'quit']:
+            print(f"{Fore.CYAN}👋 Tạm biệt! Cảm ơn bạn đã sử dụng tool.{Style.RESET_ALL}")
+            break
 
-    download_video(url)
-    print(f"\n{Fore.LIGHTCYAN_EX}✨ Cảm ơn đã sử dụng tool!{Style.RESET_ALL}")
+        if not url:
+            print(f"{Fore.RED}⚠️ URL không hợp lệ! Vui lòng nhập lại.{Style.RESET_ALL}")
+            continue
+
+        download_video(url)
+        print(f"\n{Fore.LIGHTCYAN_EX}✨ Hoàn tất tải video!{Style.RESET_ALL}")
+        print(f"{Fore.YELLOW}------------------------------------------{Style.RESET_ALL}\n")
 
 if __name__ == "__main__":
     main()
