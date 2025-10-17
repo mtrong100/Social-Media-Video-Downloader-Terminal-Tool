@@ -4,6 +4,9 @@ Tải video từ **YouTube, TikTok, Facebook, Instagram, Twitter/X**... với ch
 
 ---
 
+## 📸 Screenshot
+![Screenshot](https://i.postimg.cc/zvNbkkHj/Screenshot-2025-10-17-153439.png)
+
 ## 🚀 Tính năng
 
 - Hỗ trợ tải video từ nhiều nền tảng phổ biến
